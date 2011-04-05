@@ -1,0 +1,34 @@
+{
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_title": "java2class"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*.html", "https://*/*.html"],
+      "js": ["javadoc.js"]
+    },
+    {
+      "matches": ["http://code.google.com/*.java", "http://code.google.com/*.java"],
+      "js": ["src.js"]
+    },
+    {
+      "matches": ["http://github.com/*/blob/*.java", "https://github.com/*/blob/*.java"],
+      "js": ["src.js"]
+    },
+    {
+      "matches": ["http://bitbucket.org/*/src/*.java", "https://bitbucket.org/*/src/*.java"],
+      "js": ["src.js"]
+    }
+  ],
+  "icons": { 
+      "48": "icon48.png",
+      "128": "icon128.png" },
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "description": "",
+  "name": "java2class",
+  "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+  "update_url": "http://dl.dropbox.com/u/227786/crx/java2class/update.xml",
+  "version": "0.3.0"
+}

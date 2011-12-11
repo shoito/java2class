@@ -14,7 +14,7 @@ Java
  * Bitbucket
 
 ## How to install Chrome Extensions
- 1. Download and Install [java2class.crx](java2class.crx) 
+ 1. Install from [Chrome Web Store](https://chrome.google.com/webstore/detail/pjkknfedjcaagjfalcfnfoebghfgjnbd) 
  1. Access to Source code repository.
 
 ## Source code repository examples

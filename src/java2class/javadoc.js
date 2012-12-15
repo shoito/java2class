@@ -16,7 +16,6 @@ chrome.extension.sendRequest({"action": "isRunning"}, function(response) {
 		var className = "";
 		try {
 			className = _document.querySelector('html>body>dl>dt>pre>b').innerText;
-			console.log(className);
 		} catch (e) {
 			try {
 				var frame = _document.getElementsByName('classFrame')[0];
@@ -24,9 +23,8 @@ chrome.extension.sendRequest({"action": "isRunning"}, function(response) {
 				frame.addEventListener('load', arguments.callee);
 				
 				className = _document.querySelector('html>body>dl>dt>pre>b').innerText;
-				console.log(className);
 			} catch (e2) {
-				console.log(e2);
+				console.error(e2);
 				return;
 			}
 		}
@@ -36,7 +34,7 @@ chrome.extension.sendRequest({"action": "isRunning"}, function(response) {
 	
 		var classView = _document.createElement('div');
 		classView.id = 'classView';
-		classView.setAttribute('style', 'font-size: xx-small; z-index: 10; top:10px; right:10px; border: 1px solid; opacity: 0.8; box-shadow:0 0 3px #000; background-color:#fff; overflow: auto; max-height: 600px; max-width: 360px; position:fixed;');
+		classView.setAttribute('style', 'font-size: 12px; line-height: 1.2em; z-index: 10; top:10px; right:10px; border: 1px solid; opacity: 0.8; box-shadow:0 0 3px #000; background-color:#fff; overflow: auto; max-height: 600px; max-width: 360px; position:fixed;');
 		classView.innerHTML = buildHtml(className, fields, methods);
 	
 		_document.body.appendChild(classView);
@@ -150,12 +148,12 @@ chrome.extension.sendRequest({"action": "isRunning"}, function(response) {
 	}
 	
 	function buildHtml(className, fields, methods) {
-		return ['<h3 style="padding: 0 6px;">', 
+		return ['<h3 style="margin: 4px 0; padding: 0 6px; font-size: 1em;">', 
 		        '<a href="#skip-navbar_top" style="color: #000; text-decoration: none;">', className, '</a>', 
 		        '</h3>', 
-		        '<hr>', 
+		        '<hr style="margin: 3px 0;">', 
 		        '<div style="padding: 0 6px;">', fields.join('<p style="margin-top: 0; margin-bottom: 0;">'), '</div>', 
-		        '<hr>', 
+		        '<hr style="margin: 3px 0;">', 
 		        '<div style="padding: 0 6px;">',  methods.join('<p style="margin-top: 0; margin-bottom: 0;">'), '</div>'
 		        ].join('')
 	}

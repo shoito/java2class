@@ -3,46 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>java2doc Extension Options</title>
-<script type="text/javascript">
-	function saveOptions() {
-		saveToLocalStorage();
-		
-		var status = document.getElementById("status");
-		status.innerHTML = "Options Saved.";
-		setTimeout(function() {
-			status.innerHTML = "";
-		}, 750);
-	}
-	
-	function saveToLocalStorage() {
-        localStorage["showPublic"] = document.getElementById("public").checked + "";
-        localStorage["showProtected"] = document.getElementById("protected").checked + "";
-        localStorage["showNone"] = document.getElementById("none").checked + "";
-        localStorage["showPrivate"] = document.getElementById("private").checked + "";
-	}
-
-	function restoreOptions() {
-		var showPublic = localStorage["showPublic"];
-		var showProtected = localStorage["showProtected"];
-		var showNone = localStorage["showNone"];
-		var showPrivate = localStorage["showPrivate"];
-		
-        if (showPublic === undefined || showProtected === undefined
-                || showNone === undefined || showPrivate === undefined) {
-        	showPublic = "true";
-        	showProtected = showNone = showPrivate = "false";
-        }
-		
-		document.getElementById("public").checked = (showPublic == "true");
-		document.getElementById("protected").checked = (showProtected == "true");
-		document.getElementById("none").checked = (showNone == "true");
-		document.getElementById("private").checked = (showPrivate == "true");
-		
-        saveToLocalStorage();
-	}
-</script>
 </head>
-<body onload="restoreOptions()">
+<body>
 <div>
 <p>Select show modifiers:</p>
 <input type="checkbox" id="public">public</input><br/>
@@ -50,7 +12,8 @@
 <input type="checkbox" id="none">none</input><br/>
 <input type="checkbox" id="private">private</input><br/>
 </div>
-<button onclick="saveOptions()">Save</button>
+<button id="saveButton">Save</button>
 <span id="status"></span>
+<script src="options.js" type="text/javascript"></script>
 </body>
 </html>

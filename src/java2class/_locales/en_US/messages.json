@@ -1,0 +1,8 @@
+{
+  "appName": {
+    "message": "java2class"
+  },
+  "appDesc": {
+    "message": "This is a Google Chrome extension which reads JavaDoc/Java Source Code you are on Web browser and lets you see the detailed class descriptions of how the classes are structured with what fields and methods etc."
+  }
+}

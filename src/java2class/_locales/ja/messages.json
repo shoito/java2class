@@ -1,0 +1,8 @@
+{
+  "appName": {
+    "message": "java2class"
+  },
+  "appDesc": {
+    "message": "Chromeで閲覧しているJavaDocやソースコード(Java)を解析して、どんなフィールドやメソッドから構成されているのかを把握できるChrome拡張です。"
+  }
+}

@@ -1,5 +1,6 @@
 {
   "manifest_version": 2,
+  "default_locale": "en_US",
   "browser_action": {
     "default_icon": "icon48.png",
     "default_title": "java2class"
@@ -32,12 +33,12 @@
     ]
   },
   "options_page": "options.html",
-  "description": "",
-  "name": "java2class",
+  "description": "__MSG_appDesc__",
+  "name": "__MSG_appName__",
   "permissions": [
     "tabs", 
     "http://*/*", 
     "https://*/*" 
   ],
-  "version": "0.4.0"
+  "version": "0.4.3"
 }

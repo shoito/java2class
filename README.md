@@ -18,7 +18,7 @@ Java
  1. Access to Source code repository.
 
 ## Source code repository examples
- * <http://code.google.com/p/google-guice/source/browse/trunk/core/src/com/google/inject/Key.java>
+ * <http://code.google.com/p/google-guice/source/browse/core/src/com/google/inject/Key.java>
  * <https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/ExtensionFinder.java>
  * <https://bitbucket.org/jmurty/jets3t/src/da5139dc1f23/src/org/jets3t/service/model/StorageObject.java>
 

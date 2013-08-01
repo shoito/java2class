@@ -1,5 +1,5 @@
 # java2class
-java2class is a Chrome Extensions for Java source code and JavaDoc visualization using the Class diagram(UML).
+[java2class](https://chrome.google.com/webstore/detail/pjkknfedjcaagjfalcfnfoebghfgjnbd) is a Chrome Extensions for Java source code and JavaDoc visualization using the Class diagram(UML).
 
 ## ScreenShots
 ![JavaDoc](https://github.com/shoito/java2class/raw/master/img/javadoc2class.jpg)
